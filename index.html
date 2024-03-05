@@ -44,8 +44,8 @@
         </a>
         <!--menu------------------->
         <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="page/movie-page.html">Genre</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Genre</a></li>
             <li><a href="#">TV Shows</a></li>
             <li><a href="#">Movies</a></li>
             <li><a href="#">Contact</a></li>
@@ -71,12 +71,12 @@
                     <!--box------------------->
                     <div class="main-slider-box">
                         <!--overlayer-------->
-                        <a href="page/movie-page.html" class="main-slider-overlay">
+                        <a href="#" class="main-slider-overlay">
                             <i class="fas fa-play"></i>
                         </a>
                         <!--img----------->
                         <div class="main-slider-img">
-                            <img alt="" src="./images/post-1.jpg">
+                            <img alt="Poster" src="./images/p-1.jpg" />
                         </div>
                         <!--text---------->
                         <div class="main-slider-text">
@@ -287,7 +287,7 @@
                                     </div>
                                     <!--rating--->
                                     <div class="rating">
-                                        5.2 <img alt="imbd" src="././images/IMDb-icon.png" />
+                                        5.2 <img alt="imbd" src="./images/IMDb-icon.png" />
                                     </div>
                                 </div>
                             </div>
@@ -316,7 +316,7 @@
             <div class="post-box">
                 <!--img-->
                 <div class="post-img">
-                    <img alt="" src="././images/post-1.jpg" />
+                    <img alt="" src="./images/post-1.jpg" />
                 </div>
                 <!--text---------->
                 <div class="main-slider-text">
@@ -337,7 +337,7 @@
                             </div>
                             <!--rating--->
                             <div class="rating">
-                                5.2 <img alt="imbd" src="././images/IMDb-icon.png" />
+                                5.2 <img alt="imbd" src="./images/IMDb-icon.png" />
                             </div>
                         </div>
                     </div>
@@ -347,7 +347,7 @@
             <div class="post-box">
                 <!--img-->
                 <div class="post-img">
-                    <img alt="" src="././images/post-2.jpg" />
+                    <img alt="" src="./images/post-2.jpg" />
                 </div>
                 <!--text---------->
                 <div class="main-slider-text">
@@ -368,7 +368,7 @@
                             </div>
                             <!--rating--->
                             <div class="rating">
-                                5.2 <img alt="imbd" src="././images/IMDb-icon.png" />
+                                5.2 <img alt="imbd" src="./images/IMDb-icon.png" />
                             </div>
                         </div>
                     </div>
@@ -378,7 +378,7 @@
             <div class="post-box">
                 <!--img-->
                 <div class="post-img">
-                    <img alt="" src="././images/post-3.jpg" />
+                    <img alt="" src="./images/post-3.jpg" />
                 </div>
                 <!--text---------->
                 <div class="main-slider-text">
@@ -399,7 +399,7 @@
                             </div>
                             <!--rating--->
                             <div class="rating">
-                                5.2 <img alt="imbd" src="././images/IMDb-icon.png" />
+                                5.2 <img alt="imbd" src="./images/IMDb-icon.png" />
                             </div>
                         </div>
                     </div>
@@ -707,22 +707,25 @@
             Copyright 2021 - GoingToInternet
         </span>
     </footer>
-    <!--==JS-Swiper====================================-->
-    <script src="./js/swiper-bundle.min.js"></script>
-    <!--==jQuery=======================================-->
-    <script src="./js/jQuery.js"></script>
     <script>
         /*==scroll-progress-bar======================*/
         let scrollPrecentage = () => {
             let scrollProgress = document.getElementById("progress");
             let progressValue = document.getElementById("progress-value");
-            let pos = document.documentElement.scrollTop;
-            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrollValue = Math.round(pos * 100 / calcHeight);
+            let pos = (document.documentElement.scrollTop - document.body.scrollTop);
+
+            let scrollValue = pos * 100 / (document.documentElement.clientHeight - document.body.clientHeight) * - 1;
+            console.log("scrollvalue :", scrollValue);
             scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
         }
         window.onscroll = scrollPrecentage;
         window.onload = scrollPrecentage;
+    </script>
+    <!--==JS-Swiper====================================-->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!--==jQuery=======================================-->
+    <script src="./js/jQuery.js"></script>
+    <script>
         /*Initialize Swiper*/
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
