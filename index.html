@@ -33,6 +33,7 @@
     </div>
     <!--==Navigation===================================-->
     <nav class="navigation">
+
         <!--menu-btn--------------->
         <input type="checkbox" class="menu-btn" id="menu-btn">
         <label for="menu-btn" class="menu-icon">
@@ -50,15 +51,18 @@
             <li><a href="#">Movies</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+
         <!--Search-box------------->
-        <form action="" class="search-box">
-            <!--input-->
-            <input type="text" name="search" placeholder="Search Movie" class="search-input" required />
-            <!--btn-->
-            <button type="submit">
+        <div>
+            <div class="search-box">
+                <!--input-->
+                <input type="text" name="search" placeholder="Search Movie" id="search" class="search-input" required />
+                <!--btn-->
                 <i class="fas fa-search"></i>
-            </button>
-        </form>
+            </div>
+            <div class="search_bx2"></div>
+        </div>
+
     </nav>
     <!--nav-end-->
     <!--==slider============================================-->
@@ -836,6 +840,7 @@
         </span>
     </footer>
     <!-- Pagetation OTOMATIS -->
+    <script src="./js/searchBAR.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script>
