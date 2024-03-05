@@ -18,6 +18,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: #ffffff;
 }
 
 ::selection {
@@ -1007,7 +1008,7 @@ footer .logo {
     }
 }
 
-.simple-pagination {
+.simple-pagination ul {
     padding: 0;
     list-style: none;
     text-align: center;
@@ -1053,4 +1054,34 @@ footer .logo {
 .simple-pagination .next.current {
     background-color: #222;
     border: none;
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background: #000;
+    transition: all 1s ease;
+    height: 100%;
+    left: 0;
+    color: #fff;
+}
+
+
+.description .d-text {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.d-text h3 {
+    font-size: 24px;
+}
+
+.d-text p {
+    font-size: 14px;
+}
+
+.main-slider-text .description:hover {
+    /* top: 100%; */
+    opacity: 1;
 }
