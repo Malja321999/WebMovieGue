@@ -687,12 +687,8 @@
         </div>
         <!--container-end--->
         <!--page-number=====================-->
-        <div class="page-number">
-            <a href="#" class="page-active">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            ....
-            <a href="#">100</a>
+        <div id="pagination-container">
+
         </div>
     </section>
     <!--latest-post-end------->
@@ -707,6 +703,28 @@
             Copyright 2021 - GoingToInternet
         </span>
     </footer>
+    <!-- Pagetation OTOMATIS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
+    <script>
+        var items = $(`.post-box`);
+        var numItems = items.length;
+        console.log("numItems", numItems);
+        var perPage = 8;
+
+        items.slice(perPage).hide();
+        $("#pagination-container").pagination({
+            items: numItems,
+            itemsOnPage: perPage,
+            prevText: "<",
+            nextText: ">",
+            onPageClick: function (pageNumber) {
+                var showFrom = perPage * (pageNumber - 1);
+                var showTo = showFrom + perPage;
+                items.hide().slice(showFrom, showTo).show();
+            }
+        })
+    </script>
     <script>
         /*==scroll-progress-bar======================*/
         let scrollPrecentage = () => {
