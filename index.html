@@ -44,13 +44,27 @@
             WeMovie<span>hd</span>
         </a>
         <!--menu------------------->
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Genre</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">Anime</a></li>
-            <li><a href="#">Drama</a></li>
+        <ul class="menu" id="select-menu">
+            <div class="category-title active" id="post-box">
+                <li style="cursor: pointer;">All</li>
+            </div>
+            <div style="cursor: pointer;" class="category-title active" id="movies">
+                <li>Movies</li>
+            </div>
+            <div style="cursor: pointer;" class="category-title active" id="anime">
+                <li>Anime</li>
+            </div>
+            <div style="cursor: pointer;" class="category-title active" id="kdrama">
+                <li>K-Drama</li>
+            </div>
+            <div style="cursor: pointer;" class="category-title active" id="jdrama">
+                <li>J-Drama</li>
+            </div>
+            <div class="category-title active" id="jdrama">
+                <li><a href="./page/genre.html">Genre</a></li>
+            </div>
         </ul>
+
 
         <!--Search-box------------->
         <div>
@@ -316,7 +330,7 @@
         <!--container------->
         <div class="post-container">
             <!--post-box-1------------>
-            <div class="post-box">
+            <div class="post-box movies">
                 <!--img-->
                 <div class="post-img">
                     <img alt="" src="./images/post-1.jpg" />
@@ -845,33 +859,77 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script>
-        var items = $(`.post-box`);
+        const categoryTitle = document.querySelectorAll('.category-title');
+        console.log("cate:", categoryTitle.length);
+        const allCategoryPosts = document.querySelectorAll('.post-box');
+        const paginationContainer = document.getElementById('pagination-container');
+
+        const menu = ".post-box";
+
+        for (let i = 0; i < categoryTitle.length; i++) {
+            categoryTitle[i].addEventListener('click', filterPosts.bind(this, categoryTitle[i]));
+        }
+
+        function filterPosts(item) {
+            changeActivePosition(item);
+            for (let i = 0; i < allCategoryPosts.length; i++) {
+                if (allCategoryPosts[i].classList.contains(item)) {
+                    allCategoryPosts[i].style.display = "block";
+                } else {
+                    allCategoryPosts[i].style.display = "none";
+                }
+            }
+        }
+
+        function filterPosts(item) {
+            changeActivePosition(item);
+            for (let i = 0; i < allCategoryPosts.length; i++) {
+                if (allCategoryPosts[i].classList.contains(item.attributes.id.value)) {
+                    allCategoryPosts[i].style.display = "block";
+                } else {
+                    allCategoryPosts[i].style.display = "none";
+                }
+            }
+        }
+
+
+        function changeActivePosition(activeItem) {
+            for (let i = 0; i < categoryTitle.length; i++) {
+                categoryTitle[i].classList.remove('active');
+            }
+            activeItem.classList.add('active');
+            paginationContainer.style.visibility = "hidden";
+        };
+
+
+        var items = $(`${menu}`);
         var numItems = items.length;
         console.log("numItems", numItems);
+
         var perPage = 8;
 
         items.slice(perPage).hide();
         $("#pagination-container").pagination({
             items: numItems,
             itemsOnPage: perPage,
-            prevText: "<",
-            nextText: ">",
-            onPageClick: function (pageNumber) {
-                var showFrom = perPage * (pageNumber - 1);
-                var showTo = showFrom + perPage;
-                items.hide().slice(showFrom, showTo).show();
+            prevText: "<", nextText: ">", onPageClick: function (pageNumber) {
+                var showFrom = perPage * (pageNumber - 1); var
+                    showTo = showFrom + perPage; items.hide().slice(showFrom, showTo).show();
             }
         })
+
+
+
     </script>
+    <!-- scroll-progress-bar -->
     <script>
-        /*==scroll-progress-bar======================*/
         let scrollPrecentage = () => {
             let scrollProgress = document.getElementById("progress");
             let progressValue = document.getElementById("progress-value");
             let pos = (document.documentElement.scrollTop - document.body.scrollTop);
 
             let scrollValue = pos * 100 / (document.documentElement.clientHeight - document.body.clientHeight) * - 1;
-            console.log("scrollvalue :", scrollValue);
+
             scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
         }
         window.onscroll = scrollPrecentage;
