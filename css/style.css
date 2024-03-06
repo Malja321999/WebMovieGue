@@ -165,9 +165,8 @@ body {
 
 /*--search-box----*/
 .search-box {
-    position: relative;
-    width: fit-content;
-    top: 2.5rem;
+    position: absolute;
+    top: 5rem;
     background-color: #d1d1d111;
     padding: 3px 20px;
     border-radius: 20px;
@@ -176,7 +175,10 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
-    z-index: 2;
+}
+
+.search-box i {
+    color: white;
 }
 
 .search-box input {
@@ -192,11 +194,11 @@ body {
 
 .search_bx2 {
     position: relative;
+    margin-top: 5.8rem;
+    margin-bottom: 0px;
+    left: 0.6rem;
     width: 200px;
-    height: 100px;
-    margin-bottom: 5px;
-    left: 1rem;
-    top: 3rem;
+    height: 150px;
     font-size: 10px;
     padding: 5px;
     border-radius: 10px;
@@ -206,6 +208,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: .3s linear;
+    z-index: 9999;
 }
 
 .search_bx2::-webkit-scrollbar {
