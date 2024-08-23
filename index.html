@@ -32,6 +32,7 @@
         <div id="progress-value"></div>
     </div>
     <!--==Navigation===================================-->
+
     <nav class="navigation">
         <!--menu-btn--------------->
         <input type="checkbox" class="menu-btn" id="menu-btn">
@@ -45,34 +46,60 @@
         <!--menu------------------->
         <ul class="menu" id="select-menu">
             <div class="category-title active" id="all">
-                <li class="menuText">ALL</li>
+                <li class="menuText">
+                    <label for="menu-btn">
+                        <a href="#hasilCategory">
+                            All
+                        </a>
+                    </label>
+                </li>
             </div>
             <div class="category-title" id="movies">
-                <li class="menuText">Movies</li>
+                <li class="menuText">
+                    <label for="menu-btn">
+                        <a href="#hasilCategory">
+                            Movies
+                        </a>
+                    </label>
+                </li>
             </div>
             <div class="category-title" id="anime">
-                <li class="menuText">Anime</li>
+                <li class="menuText">
+                    <label for="menu-btn">
+                        <a href="#hasilCategory">
+                            Anime
+                        </a>
+                    </label>
+                </li>
             </div>
             <div class="category-title" id="kdrama">
-                <li class="menuText">K-Drama</li>
+                <li class="menuText">
+                    <label for="menu-btn">
+                        <a href="#hasilCategory">
+                            K-drama
+                        </a>
+                    </label>
+                </li>
             </div>
             <div class="category-title" id="jdrama">
-                <li class="menuText">J-Drama</li>
+                <li class="menuText">
+                    <label for="menu-btn">
+                        <a href="#hasilCategory">
+                            J-drama
+                        </a>
+                    </label>
+                </li>
             </div>
         </ul>
 
-
         <!--Search-box------------->
-        <div>
-            <div class="search-box">
-                <!--input-->
-                <input type="text" name="search" placeholder="Search Movie" id="search" class="search-input" required />
-                <!--btn-->
-                <i class="fas fa-search"></i>
-            </div>
-            <div class="search_bx2"></div>
+        <div class="search-box">
+            <!--input-->
+            <input type="text" name="search" placeholder="Search Movie" id="search" class="search-input" required />
+            <!--btn-->
+            <i class="fas fa-search"></i>
         </div>
-
+        <div class="search_bx2"></div>
     </nav>
     <!--nav-end-->
     <!--==slider============================================-->
@@ -320,6 +347,7 @@
     <!--==Latest-Movies==================================-->
     <section id="latest">
         <!--heading-------->
+        <div id="hasilCategory" style="margin-bottom: 60px;"></div>
         <div class="latest-heading">
             <h1>Latest Movies</h1>
         </div>
@@ -866,6 +894,16 @@
     <script src="./js/jQuery.js"></script>
     <!-- Setting View Swiper/Slider -->
     <script src="./js/SettingViewSwipwerSlider.js"></script>
+    <script>
+        document.getElementById('toggleBtn').onclick = function () {
+            var menu = document.querySelector('.menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        };
+    </script>
 </body>
 
 </html>
