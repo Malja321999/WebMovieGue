@@ -115,13 +115,21 @@ body {
     animation: fade 0.3s;
 }
 
-.menu li {
+.menuText {
     color: #ffffff;
-    margin: 0px 40px;
+    margin: 0 40px;
     font-size: 2rem;
     font-family: Monoton;
-    transition: all ease 0.3s;
+    transition: all 0.3s ease;
 }
+
+.active .menuText {
+    background-color: #3e0505e4;
+    padding: 1px;
+    font-size: 2.3rem;
+    color: red;
+}
+
 
 .menu li a {
     color: #ffffff;
@@ -156,6 +164,8 @@ body {
         opacity: 1;
     }
 }
+
+
 
 /*--logo--------------*/
 .logo {
@@ -353,6 +363,16 @@ body {
     margin-top: 10px;
     color: #dfdfdf;
     letter-spacing: 0.5px;
+}
+
+.category-title {
+    cursor: pointer;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 .main-slider-text .category {
@@ -568,8 +588,11 @@ footer .logo {
     display: grid;
     place-items: center;
     font-weight: 600;
-    font-size: 0px;
+    font-size: 10px;
+    color: white;
 }
+
+
 
 /*==Making-Home-page-Responsive==================*/
 @media(max-width:1200px) {
