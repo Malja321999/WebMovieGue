@@ -3,6 +3,9 @@ console.log("cate:", categoryTitle.length);
 const allCategoryPosts = document.querySelectorAll(".post-box"); //ambil semua post-box tapi cuma bagian sebelah, class = "post-box movies"  jadi cuma bisa di ambil kategori di class langsunganya saja
 const paginationContainer = document.getElementById("pagination-container");
 const menu = ".post-box";
+const ket_hasil_category = document.getElementById("ket_hasil_category");
+
+ket_hasil_category.innerHTML = "Latest Movies";
 
 for (let i = 0; i < categoryTitle.length; i++) {
   categoryTitle[i].addEventListener(
@@ -29,6 +32,10 @@ function filterPosts(item) {
       allCategoryPosts[i].style.display = "block";
     } else {
       allCategoryPosts[i].style.display = "none";
+    }
+    if (categoryTitle.length - 1 == i) {
+      window.location.href = "#hasilCategory";
+      ket_hasil_category.innerHTML = "Hasil Pencarian";
     }
   }
 }
@@ -59,3 +66,7 @@ $("#pagination-container").pagination({
     items.hide().slice(showFrom, showTo).show();
   },
 });
+
+function AllCategory() {
+  window.location.href = "/#hasilCategory";
+}
