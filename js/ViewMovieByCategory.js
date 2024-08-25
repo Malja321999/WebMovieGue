@@ -68,5 +68,6 @@ $("#pagination-container").pagination({
 });
 
 function AllCategory() {
-  window.location.href = "/#hasilCategory";
+  window.location.href = "#AllCategory";
+  /* perPage = categoryTitle.length; */
 }

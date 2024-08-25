@@ -117,6 +117,7 @@ body {
 }
 
 .menuText {
+    cursor: pointer;
     color: #ffffff;
     margin: 0 40px;
     font-size: 2rem;
