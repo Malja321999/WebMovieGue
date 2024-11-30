@@ -125,7 +125,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.active .menuText {
+.active {
     background-color: #3e0505e4;
     padding: 1px;
     font-size: 2.3rem;
