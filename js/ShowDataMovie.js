@@ -1,4 +1,4 @@
-import { movies } from "./DataMovie.js";
+import { movies } from "/js/DataMovie.js";
 
 
 /* function to slider swiper */
