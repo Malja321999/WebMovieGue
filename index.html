@@ -50,54 +50,18 @@
             WeMovie<span>hd</span>
         </a>
         <!--menu------------------->
-        <ul class="menu" id="select-menu">
-            <div class="category-title" id="all">
-                <li>
-                    <label class="menuText menuText-all" for="menu-btn" onclick="setActive(this)">
-
-                        All
-
-                    </label>
-                </li>
-            </div>
-            <div class="category-title" id="movies">
-                <li>
-                    <label class="menuText" for="menu-btn" onclick="setActive(this)">
-
-                        Movies
-
-                    </label>
-                </li>
-            </div>
-            <div class="category-title" id="anime">
-                <li>
-                    <label class="menuText" for="menu-btn" onclick="showMoviesByCategory('Anime'); setActive(this)">
-
-                        Anime
-
-                    </label>
-                </li>
-            </div>
-            <div class="category-title" id="kdrama">
-                <li>
-                    <label class="menuText" for="menu-btn" onclick="setActive(this)">
-
-                        K-drama
-
-                    </label>
-                </li>
-            </div>
-            <div class="category-title" id="jdrama">
-                <li>
-                    <label class="menuText" for="menu-btn" onclick="setActive(this)">
-
-                        J-drama
-
-                    </label>
-                </li>
-            </div>
+        <ul class="menu">
+            <li><a class="menuText" href="#hasilCategory" onclick="showMoviesByCategory(''); setActive(this)">All</a>
+            </li>
+            <li><a class="menuText" href="#hasilCategory"
+                    onclick="showMoviesByCategory('Movies'); setActive(this)">Movies</a></li>
+            <li><a class="menuText" href="#hasilCategory"
+                    onclick="showMoviesByCategory('Anime'); setActive(this)">Anime</a></li>
+            <li><a class="menuText" href="#hasilCategory"
+                    onclick="showMoviesByCategory('K-Drama'); setActive(this)">K-Drama</a></li>
+            <li><a class="menuText" href="#hasilCategory"
+                    onclick="showMoviesByCategory('J-Drama'); setActive(this)">J-Drama</a></li>
         </ul>
-
         <!--Search-box------------->
         <div class="search-box">
             <!--input-->
@@ -127,7 +91,6 @@
     <section id="latest">
         <!--heading-------->
         <div class="latest-heading" id="hasilCategory">
-            <h1 id="ket_hasil_category"></h1>
         </div>
         <!--container------->
         <div class="post-container">
@@ -152,8 +115,6 @@
         </span>
     </footer>
     <!--footer-end------------->
-
-
 
 </body>
 

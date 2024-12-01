@@ -8,7 +8,7 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2014",
     title: "Paranormal Activity: The Marked Ones",
-    categories: ["Horror", "Mistery", "Thriller"],
+    Genre: ["Horror", "Mistery", "Thriller"],
     rating: "5.2",
   },
   {
@@ -20,7 +20,7 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2017",
     title: "Pirates of the Caribbean: Salazar's Revenge",
-    categories: ["Action", "Adventure", "Fantasy"],
+    Genre: ["Action", "Adventure", "Fantasy"],
     rating: "6.5",
   },
   {
@@ -32,7 +32,7 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2020",
     title: "BloodShot",
-    categories: ["Action", "Sci-Fi", "Thriller"],
+    Genre: ["Action", "Sci-Fi", "Thriller"],
     rating: "6.7",
   },
   {
@@ -44,7 +44,7 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2021",
     title: "Venom: Let There Be Carnage",
-    categories: ["Action", "Adventure", "Fantasy"],
+    Genre: ["Action", "Adventure", "Fantasy"],
     rating: "7.4",
   },
   {
@@ -56,7 +56,7 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2018",
     title: "Deadpool 2",
-    categories: ["Action", "Sci-Fi", "Thriller"],
+    Genre: ["Action", "Sci-Fi", "Thriller"],
     rating: "8.8",
   },
   {
@@ -68,7 +68,7 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2021",
     title: "Black Widow",
-    categories: ["Adventure", "Drama", "Sci-Fi"],
+    Genre: ["Adventure", "Drama", "Sci-Fi"],
     rating: "8.6",
   },
   {
@@ -80,10 +80,12 @@ const movies = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
     year: "2021",
     title: "Anime",
-    categories: ["Adventure", "Drama", "Sci-Fi"],
+    Genre: ["Adventure", "Drama", "Sci-Fi"],
     rating: "8.6",
   },
 ];
+
+/* function pembuat movie-page */
 
 /* function to slider swiper */
 let swiperWrapper = document.getElementsByClassName("swiper-wrapper")[0];
@@ -119,9 +121,9 @@ swipermovies.forEach((movie) => {
             <div class="category-rating">
               <!--category-->
               <div class="category">
-                ${movie.categories
-                  .map((category) => `<a href="#">${category}</a>`)
-                  .join(", ")}
+                ${movie.Genre.map((genre) => `<a href="#">${genre}</a>`).join(
+                  ", "
+                )}
               </div>
               <!--rating--->
               <div class="rating">
@@ -177,10 +179,10 @@ search.addEventListener("keyup", () => {
 /* Function to render latest movie / allcategory */
 let post = document.getElementsByClassName("post-container")[0];
 
-  movies.forEach((movie) => {
-    let movieDiv = document.createElement("div");
-    movieDiv.className = "post-box all movies";
-    movieDiv.innerHTML = `
+movies.forEach((movie) => {
+  let movieDiv = document.createElement("div");
+  movieDiv.className = "post-box all movies";
+  movieDiv.innerHTML = `
     <div class="post-img">
       <img src="${movie.img}" alt="${movie.title}" />
     </div>
@@ -199,9 +201,7 @@ let post = document.getElementsByClassName("post-container")[0];
         </div>
         <div class="category-rating">
           <div class="category">
-            ${movie.categories
-              .map((category) => `<a href="#">${category}</a>`)
-              .join(", ")}
+            ${movie.Genre.map((genre) => `<a href="#">${genre}</a>`).join(", ")}
           </div>
           <div class="rating">
             ${movie.rating} <img alt="imbd" src="./images/IMDb-icon.png" />
@@ -210,8 +210,8 @@ let post = document.getElementsByClassName("post-container")[0];
       </div>
     </div>
   `;
-    post.appendChild(movieDiv);
-  });
+  post.appendChild(movieDiv);
+});
 
 /* Close menu category */
 var checkbox = document.getElementById("menu-btn");
@@ -244,11 +244,13 @@ function setActive(element) {
 }
 
 /* function to show render movie by menu */
+let hasil = document.getElementById("hasilCategory");
 function showMoviesByCategory(jenisMenuMovie) {
   post.innerHTML = "";
-  console.log(jenisMenuMovie);
+  hasil.innerHTML = "";
   movies.forEach((movie) => {
     if (movie.jenis.includes(jenisMenuMovie)) {
+      console.log("isi pencarian :", movie.jenis);
       let movieDiv = document.createElement("div");
       movieDiv.className = "post-box all movies";
       movieDiv.innerHTML = `
@@ -270,9 +272,9 @@ function showMoviesByCategory(jenisMenuMovie) {
             </div>
             <div class="category-rating">
               <div class="category">
-                ${movie.categories
-                  .map((category) => `<a href="#">${category}</a>`)
-                  .join(", ")}
+                ${movie.Genre.map((genre) => `<a href="#">${genre}</a>`).join(
+                  ", "
+                )}
               </div>
               <div class="rating">
                 ${movie.rating} <img alt="imbd" src="./images/IMDb-icon.png" />
@@ -284,4 +286,7 @@ function showMoviesByCategory(jenisMenuMovie) {
       post.appendChild(movieDiv);
     }
   });
+  if (post.innerHTML.trim() === "") {
+    hasil.innerHTML = `<h1 style="background-color: red; color: white; text-align: center; width: screen; padding: 10px">Movie Tidak Ditemukan Karena Belum DiPost </h1>`;
+  }
 }
