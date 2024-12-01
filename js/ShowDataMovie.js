@@ -1,105 +1,22 @@
-const movies = [
-  {
-    id: 1,
-    jenis: "Movie",
-    img: "../images/p-1.jpg",
-    url: "../page/movie-page-paranormal.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2014",
-    title: "Paranormal Activity: The Marked Ones",
-    Genre: ["Horror", "Mistery", "Thriller"],
-    rating: "5.2",
-  },
-  {
-    id: 2,
-    jenis: "Movie",
-    img: "../images/p-2.jpg",
-    url: "../page/movie-page-pirates.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2017",
-    title: "Pirates of the Caribbean: Salazar's Revenge",
-    Genre: ["Action", "Adventure", "Fantasy"],
-    rating: "6.5",
-  },
-  {
-    id: 3,
-    jenis: "Movie",
-    img: "../images/p-3.jpg",
-    url: "../page/movie-page-blood-shot.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2020",
-    title: "BloodShot",
-    Genre: ["Action", "Sci-Fi", "Thriller"],
-    rating: "6.7",
-  },
-  {
-    id: 4,
-    jenis: "Movie",
-    img: "../images/p-4.jpg",
-    url: "../page/movie-page-venom.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2021",
-    title: "Venom: Let There Be Carnage",
-    Genre: ["Action", "Adventure", "Fantasy"],
-    rating: "7.4",
-  },
-  {
-    id: 5,
-    jenis: "Movie",
-    img: "../images/p-5.jpg",
-    url: "../page/movie-page-deadpool2.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2018",
-    title: "Deadpool 2",
-    Genre: ["Action", "Sci-Fi", "Thriller"],
-    rating: "8.8",
-  },
-  {
-    id: 6,
-    jenis: "Movie",
-    img: "../images/p-6.jpg",
-    url: "../page/movie-page-blackwidow.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2021",
-    title: "Black Widow",
-    Genre: ["Adventure", "Drama", "Sci-Fi"],
-    rating: "8.6",
-  },
-  {
-    id: 7,
-    jenis: "Anime",
-    img: "../images/p-6.jpg",
-    url: "../page/movie-page-blackwidow.html",
-    summary:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidemeum distinctio eius maxime. Commodi omnis ab accusamus officia nisi, voluptate quibusdam repudiandae tenetur cumque libero necessitatibus itaque numquam, tempore esse enim eum facilis saepe totam? Sit quasi aspernatur non quam quisquam ea beatae laudantium, esse recusandae, excepturi consequuntur! Velit, ut.",
-    year: "2021",
-    title: "Anime",
-    Genre: ["Adventure", "Drama", "Sci-Fi"],
-    rating: "8.6",
-  },
-];
+import { movies } from "./DataMovie.js";
 
-/* function pembuat movie-page */
 
 /* function to slider swiper */
 let swiperWrapper = document.getElementsByClassName("swiper-wrapper")[0];
 let swipermovies = movies.slice(0, 6); // Take the first 6 items
 
+// Assuming swiperWrapper is already defined somewhere in your code
+// e.g. let swiperWrapper = document.querySelector('.swiper-wrapper');
+
 swipermovies.forEach((movie) => {
   let movieDiv = document.createElement("div");
   movieDiv.className = "swiper-slide";
   movieDiv.innerHTML = `
-    <div class="swiper-slide">
+    <div class="swiper-slide" onclick="ShowPageMovie('${movie.title}')">
       <!--box------------------->
       <div class="main-slider-box">
         <!--overlay-------->
-        <a href="${movie.url}" class="main-slider-overlay">
+        <a href="/movie-page.html" class="main-slider-overlay">
           <i class="fas fa-play"></i>
         </a>
         <!--img----------->
@@ -127,7 +44,7 @@ swipermovies.forEach((movie) => {
               </div>
               <!--rating--->
               <div class="rating">
-                ${movie.rating} <img alt="imbd" src="images/IMDb-icon.png" />
+                ${movie.rating} <img alt="imdb" src="images/IMDb-icon.png" />
               </div>
             </div>
           </div>

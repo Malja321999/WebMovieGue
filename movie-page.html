@@ -20,15 +20,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <!--==Using-Font-Awesome======================-->
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <!-- JS Link -->
+    <!-- Hapus -->
+    <script type="module" src="./js/MoviePage.js" defer></script>
 </head>
 
-<body>
-    <!--==Scroll-Progress-bar=========================-->
-    <div id="progress">
-        <span id="progress-value"></span>
-    </div>
+<body class="moviepage">
     <!--==Navigation===================================-->
     <nav class="navigation">
         <!--menu-btn--------------->
@@ -177,49 +174,9 @@
         </a>
         <!--copyright----->
         <span class="copyright">
-            Copyright 2021 - GoingToInternet
+            Copyright 2024 - MALJA.com
         </span>
     </footer>
-    <!--==jQuery=======================================-->
-    <script src="js/jQuery.js"></script>
-    <script>
-        /*==scroll-progress-bar======================*/
-        let scrollPrecentage = () => {
-            let scrollProgress = document.getElementById("progress");
-            let progressValue = document.getElementById("progress-value");
-            let pos = document.documentElement.scrollTop;
-            let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            let scrollValue = Math.round(pos * 100 / calcHeight);
-            scrollProgress.style.background = `conic-gradient(#e70634 ${scrollValue}%, #2b2f38 ${scrollValue}%)`;
-        }
-        window.onscroll = scrollPrecentage;
-        window.onload = scrollPrecentage;
-        /*--menu-btn-fixed-when-scroll============*/
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 20) {
-                $('.navigation').addClass('fix-icon');
-            }
-            else {
-                $('.navigation').removeClass('fix-icon');
-            }
-        });
-        /*==popup-open==================================*/
-        $(document).on('click', '.play-btn a', function () {
-            $('.play').addClass('active-popup');
-        });
-        /*==popup-Close==================================*/
-        $(document).on('click', '.close-movie', function () {
-            $('.play').removeClass('active-popup');
-        });
-        /*==auto-play-when-popup-open===================*/
-        $('.play-btn a').click(function () {
-            $('#m-video')[0].play();
-        });
-        /*==Close-video-when-poppup-close==============*/
-        $('.close-movie').click(function () {
-            $('#m-video')[0].pause();
-        });
-    </script>
 </body>
 
 </html>
