@@ -20,21 +20,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
-    <!--==Using-Font-Awesome======================-->
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous" defer></script>
     <!--==CSS-Swiper==============================-->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <!-- JS Link -->
     <!-- Search Bar -->
-    <script src="./js/searchBAR.js" defer></script>
+    <script src="./js/ShowDataMovie.js" defer></script>
     <!-- Pagetation OTOMATIS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0-beta/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"
         defer></script>
-    <!-- View Movie by Category -->
-    <script src="./js/ViewMovieByCategory.js" defer></script>
-    <!-- scroll-progress-bar -->
-    <script src="./js/ScrollProgressBar" defer></script>
     <!--==JS-Swiper====================================-->
     <script src="./js/swiper-bundle.min.js" defer></script>
     <!--==jQuery=======================================-->
@@ -77,7 +71,7 @@
             </div>
             <div class="category-title" id="anime">
                 <li>
-                    <label class="menuText" for="menu-btn" onclick="setActive(this)">
+                    <label class="menuText" for="menu-btn" onclick="showMoviesByCategory('Anime'); setActive(this)">
 
                         Anime
 
@@ -138,7 +132,6 @@
         <!--container------->
         <div class="post-container">
             <!--post-box-1------------>
-
         </div>
         <!--container-end--->
         <!--page-number=====================-->
