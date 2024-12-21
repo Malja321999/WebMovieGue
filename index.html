@@ -34,7 +34,9 @@
     <!-- Setting View Swiper/Slider -->
     <script src="./js/SettingViewSwipwerSlider.js" defer></script>
     <!-- Show Data Movie -->
-    <script src="./js/ShowDataMovie.js" defer></script>
+    <script type="module" src="./js/ShowDataMovie.js" defer></script>
+    <!--==Using-Font-Awesome======================-->
+    <script src="https://kit.fontawesome.com/fb38f07a0f.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="moviepage">
@@ -51,17 +53,13 @@
         </a>
         <!--menu------------------->
         <ul class="menu">
-            <li><a class="menuText" href="#hasilCategory" onclick="showMoviesByCategory(''); setActive(this)">All</a>
-            </li>
-            <li><a class="menuText" href="#hasilCategory"
-                    onclick="showMoviesByCategory('Movies'); setActive(this)">Movies</a></li>
-            <li><a class="menuText" href="#hasilCategory"
-                    onclick="showMoviesByCategory('Anime'); setActive(this)">Anime</a></li>
-            <li><a class="menuText" href="#hasilCategory"
-                    onclick="showMoviesByCategory('K-Drama'); setActive(this)">K-Drama</a></li>
-            <li><a class="menuText" href="#hasilCategory"
-                    onclick="showMoviesByCategory('J-Drama'); setActive(this)">J-Drama</a></li>
+            <li><a class="menuText">All</a></li>
+            <li><a class="menuText">Movie</a></li>
+            <li><a class="menuText">Anime</a></li>
+            <li><a class="menuText">K-Drama</a></li>
+            <li><a class="menuText">J-Drama</a></li>
         </ul>
+
         <!--Search-box------------->
         <div class="search-box">
             <!--input-->
@@ -107,7 +105,7 @@
     <footer>
         <!--footer-logo--->
         <a href="/" class="logo">
-            WEMovies<span>hd</span>
+            WEMovie<span>hd</span>
         </a>
         <!--copyright----->
         <span class="copyright">
