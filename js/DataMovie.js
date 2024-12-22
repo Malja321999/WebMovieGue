@@ -6,10 +6,12 @@ export const movies = [
     url: "../page/movie-page-paranormal.html",
     summary:
       "Seventeen-year-old Jesse has been hearing terrifying sounds coming from his neighbor’s apartment, but when he turns on his camera and sets out to uncover their source, he encounters an ancient evil that won’t rest until it’s claimed his very soul.",
-    year: "2014",
     title: "Paranormal Activity: The Marked Ones",
-    Genre: ["Horror", "Mistery", "Thriller"],
     rating: "5.4",
+    year: "2014",
+    durasi: "",
+    language: "English",
+    Genre: ["Horror", "Mistery", "Thriller"],
     screenshot: [
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
@@ -25,10 +27,12 @@ export const movies = [
     url: "../page/movie-page-pirates.html",
     summary:
       "Untuk mematahkan kutukan Flying Dutchman, Jack Sparrow dan Henry Turner mulai mencari tombak Trident of Poseidon. Keduanya juga berusaha menghentikan Kapten Salazar yang ingin untuk menguasai lautan.",
-    year: "2017",
     title: "Pirates of the Caribbean Salazars Revenge",
-    Genre: ["Action", "Adventure", "Fantasy"],
     rating: "6.5",
+    year: "2017",
+    durasi: "",
+    language: "English",
+    Genre: ["Action", "Adventure", "Fantasy"],
     screenshot: [
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
@@ -44,10 +48,12 @@ export const movies = [
     url: "../page/movie-page-blood-shot.html",
     summary:
       "Ray Garrison, an elite soldier who was killed in battle, is brought back to life by an advanced technology that gives him the ability of super human strength and fast healing. With his new abilities, he goes after the man who killed his wife, or at least, who he believes killed his wife. He soon comes to learn that not everything he learns can be trusted. The true question is: Can he even trust himself?",
-    year: "2020",
     title: "BloodShot",
-    Genre: ["Action", "Sci-Fi", "Thriller"],
     rating: "5.7",
+    year: "2020",
+    durasi: "",
+    language: "English",
+    Genre: ["Action", "Sci-Fi", "Thriller"],
   },
   {
     id: 4,
@@ -56,17 +62,19 @@ export const movies = [
     url: "../page/movie-page-venom.html",
     summary:
       "Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him super-human abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.",
-    year: "2021",
     title: "Venom: Let There Be Carnage",
-    Genre: ["Action", "Adventure", "Fantasy"],
     rating: "5.9",
+    year: "2021",
+    durasi: "1 j 37 m",
+    language: "English",
+    Genre: ["Action", "Adventure", "Fantasy"],
     screenshot: [
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-3.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-4.jpg",
     ],
-    trailer: "https://youtu.be/BrX5op6_9uw?si=8NCmUxYi4zqifUyS",
+    trailer: "https://youtu.be/-FmWuCgJmxo?si=XpBtIPVYHwy1JlEh",
   },
   {
     id: 5,
@@ -75,10 +83,12 @@ export const movies = [
     url: "../page/movie-page-deadpool2.html",
     summary:
       "After losing Vanessa (Morena Baccarin), the love of his life, fourth-wall-breaking mercenary Wade Wilson, aka Deadpool (Ryan Reynolds), must assemble a team and protect a young mutant Russell Collins, aka Firefist (Julian Dennison), from Cable (Josh Brolin), a no-nonsense, dangerous cyborg from the future, and must also learn the most important lesson of all: to be part of a family again.",
-    year: "2018",
     title: "Deadpool 2",
-    Genre: ["Action", "Sci-Fi", "Thriller"],
     rating: "7.6",
+    year: "2018",
+    durasi: "",
+    language: "English",
+    Genre: ["Action", "Sci-Fi", "Thriller"],
     screenshot: [
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
@@ -94,10 +104,12 @@ export const movies = [
     url: "../page/movie-page-blackwidow.html",
     summary:
       'In Marvel Studios\' action-packed spy thriller "Black Widow," Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Pursued by a force that will stop at nothing to bring her down, Natasha must deal with her history as a spy and the broken relationships left in her wake long before she became an Avenger.',
-    year: "2021",
     title: "Black Widow",
-    Genre: ["Adventure", "Drama", "Sci-Fi"],
     rating: "6.6",
+    year: "2021",
+    durasi: "",
+    language: "English",
+    Genre: ["Adventure", "Drama", "Sci-Fi"],
     screenshot: [
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
@@ -113,10 +125,12 @@ export const movies = [
     url: "../page/movie-page-blackwidow.html",
     summary:
       "Mitsuha is the daughter of the mayor of a small mountain town. She's a straightforward high school girl who lives with her sister and her grandmother and has no qualms about letting it be known that she's uninterested in Shinto rituals or helping her father's electoral campaign. Instead she dreams of leaving the boring town and trying her luck in Tokyo. Taki is a high school boy in Tokyo who works part-time in an Italian restaurant and aspires to become an architect or an artist. Every night he has a strange dream where he becomes...a high school girl in a small mountain town.",
-    year: "2016",
     title: "Your Name.",
-    Genre: ["Drama", "Fantasy", "Romance"],
     rating: "8.4",
+    year: "2016",
+    durasi: "",
+    language: "Japanese",
+    Genre: ["Drama", "Fantasy", "Romance"],
     screenshot: [
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
       "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",

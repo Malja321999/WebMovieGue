@@ -1,0 +1,188 @@
+import { movies } from "../../js/DataMovie.js";
+
+const NamaMovie = "Pirates of the Caribbean Salazars Revenge";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const moviePage = document.getElementById("movie_page");
+  if (moviePage) {
+    moviePage.innerHTML = "";
+    console.log("jalan!");
+    movies.map((movie) => {
+      if (movie.title.includes(NamaMovie)) {
+        const Div = document.createElement("div");
+        Div.innerHTML = `<div id="movie_page">
+    <!--==Navigation===================================-->
+    <nav class="navigation">
+        <!--logo------------------->
+        <a href="/" class="logo">
+            WeMovie<span>.hd</span>
+        </a>
+
+        <!--Search-box------------->
+        <div class="search-box">
+            <!--input-->
+            <input type="text" name="search" placeholder="Search Movie" id="search" class="search-input" required />
+            <!--btn-->
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="search_bx2"></div>
+    </nav>
+
+    <!--nav-end-->
+    <!--==Movie-Banner=========================================-->
+    <section class="movie-banner">
+        <!--==img==================================-->
+        <div class="m-banner-img">
+            <img alt="" src=${movie.img}>
+        </div>
+        <!--content================================-->
+        <div class="banner-container">
+            <!--title-container*******************----->
+            <div class="title-container">
+                <!--title-top===============-->
+                <div class="title-top">
+                    <!--title----->
+                    <div class="movie-title">
+                        <h1>${movie.title}</h1>
+                    </div>
+                    <!--more-about-movie-->
+                    <div class="more-about-movie">
+                        <span class="quality">Full HD</span>
+                        <div class="rating">
+                            ${
+                              movie.rating
+                            }<img alt="imbd" src="../images/IMDb-icon.png">
+                        </div>
+                        <span>${movie.year}</span>
+                        <span>1 j 37 m</span>
+                    </div>
+                    <!--language--------->
+                    <div class="language">
+                        <span>${movie.language}</span>
+                    </div>
+                </div>
+                <!--Title-botttom==========================-->
+                <div class="title-bottom">
+                    <!--category------->
+                    <div class="category">
+                        <strong>Category</strong><br />
+                        ${movie.Genre.map(
+                          (genre) => `<a href="#">${genre}</a>`
+                        ).join(", ")}
+                    </div>
+                    <!--trailer-btn---->
+                    <a href="${
+                      movie.trailer
+                    }" target="_blank" class="watch-btn">Watch
+                        Trailer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Banner-end------------->
+    <!--details=====================================-->
+    <section class="movie-details">
+        <strong>Venom: Let There Be Carnage</strong>
+        <p>Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him
+            super-human
+            abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial
+            killer Cletus
+            Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.
+        </p>
+    </section>
+    <!--==ScreenShots===============================-->
+    <!-- <section class="screenshots">
+        <strong>ScreenShots</strong>
+        <div class="screen-s-container">
+            <img alt="" src="../Movie-Data/Venom_Let _There_Be_Carnage/Venom.jpg">
+            <img alt="" src="../Movie-Data/Venom_Let _There_Be_Carnage/Venom.jpg">
+            <img alt="" src="../Movie-Data/Venom_Let _There_Be_Carnage/Venom.jpg">
+            <img alt="" src="../Movie-Data/Venom_Let _There_Be_Carnage/Venom.jpg">
+        </div>
+    </section> -->
+    <!--Download====================================-->
+    <section class="download-movie">
+        <!--container----------------->
+        <div class="download-container">
+            <!--box---->
+            <div class="download-box">
+                <span><i class="fas fa-server"></i> Server 1</span>
+                <span>English</span>
+                <span>480p</span>
+                <a href="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/Movie.mkv" download>Download</a>
+            </div>
+            <!--box---->
+            <div class="download-box">
+                <span><i class="fas fa-server"></i> Server 2</span>
+                <span>English</span>
+                <span>720p</span>
+                <a href="#">Download</a>
+            </div>
+            <!--box---->
+            <div class="download-box">
+                <span><i class="fas fa-server"></i> Server 3</span>
+                <span>English</span>
+                <span>1080p</span>
+                <a href="#">Download</a>
+            </div>
+        </div>
+    </section>
+    <!--==footer==============================-->
+    <footer>
+        <!--footer-logo--->
+        <a href="index.html" class="logo">
+            WeMovie<span>hd</span>
+        </a>
+        <!--copyright----->
+        <span class="copyright">
+            Copyright 2021 - GoingToInternet
+        </span>
+    </footer>
+</div>
+`;
+        moviePage.appendChild(Div);
+      }
+    });
+
+    /* function to Render Result search bar*/
+    let search_bx2 = document.getElementsByClassName("search_bx2")[0];
+
+    function renderMoviesSearchBar(movies) {
+      search_bx2.innerHTML = ""; // Clear previous movies
+      movies.forEach((element) => {
+        const { img, title, year, url } = element;
+
+        let card = document.createElement("a");
+        card.href = url;
+
+        card.innerHTML = `<img src="${img}" alt="${title}"/>
+    <div class="content2">
+      <h6>${title}</h6>
+      <p>${year}</p>
+    </div>`;
+        search_bx2.appendChild(card);
+      });
+    }
+    /* function to search bar */
+    let search = document.getElementById("search");
+    console.log("isi cari:", search);
+    if (search) {
+      search.addEventListener("keyup", () => {
+        let filter = search.value.toUpperCase();
+        let filteredMovies = movies.filter((movie) =>
+          movie.title.toUpperCase().includes(filter)
+        );
+
+        if (filter === "") {
+          search_bx2.style.visibility = "hidden";
+          search_bx2.style.opacity = 0;
+        } else {
+          search_bx2.style.visibility = "visible";
+          search_bx2.style.opacity = 1;
+        }
+
+        renderMoviesSearchBar(filteredMovies);
+      });
+    }
+  }
+});
