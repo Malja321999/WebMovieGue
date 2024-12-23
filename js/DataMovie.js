@@ -1,5 +1,29 @@
 export const movies = [
   {
+    id: 10,
+    jenis: "Movie",
+    img: "../images/ArcaneS2.webp",
+    url: "../page/movie-page-arcanes2.html",
+    summary:
+      "Di tengah perselisihan tajam antara kota kembar Piltover dan Zaun, dua saudara perempuan bertempur di pihak yang berlawanan dalam perang antara teknologi sihir dan keyakinan yang saling bertentangan.",
+    title: "Arcane Season 2",
+    rating: "8.9",
+    year: "2024",
+    duration: "43 Minutes/Eps",
+    language: "English",
+    Genre: ["Action", "Adventure", "Animation", "Fantasy", "Sci-Fi"],
+    screenshot: [
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-3.jpg",
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-4.jpg",
+    ],
+    trailer: "https://youtu.be/ysqiEC6bLUI?si=KZd_fjVI-6k4uyJ5",
+    link480p: "https://sfl.gl/Arcanes2480p",
+    link720p: "https://sfl.gl/Arcanes2720p",
+    link1080p: "https://sfl.gl/Arcanes21080p",
+  },
+  {
     id: 9,
     jenis: "Movie",
     img: "../images/ArcaneS1.jpg",
