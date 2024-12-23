@@ -82,13 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
     <!--Banner-end------------->
     <!--details=====================================-->
     <section class="movie-details">
-        <strong>Venom: Let There Be Carnage</strong>
-        <p>Eddie Brock struggles to adjust to his new life as the host of the alien symbiote Venom, which grants him
-            super-human
-            abilities in order to be a lethal vigilante. Brock attempts to reignite his career by interviewing serial
-            killer Cletus
-            Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.
-        </p>
+        <strong>${movie.title}</strong>
+        <p>${movie.summary}</p>
     </section>
     <!--==ScreenShots===============================-->
     <!-- <section class="screenshots">
@@ -105,32 +100,33 @@ document.addEventListener("DOMContentLoaded", function () {
         <!--container----------------->
         <div class="download-container">
             <!--box---->
-            <div class="download-box">
+            <!-- <div class="download-box">
                 <span><i class="fas fa-server"></i> Server 1</span>
-                <span>English</span>
+                <span>Indonesia</span>
                 <span>480p</span>
-                <a href="Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/Movie.mkv" download>Download</a>
+                <a href=${movie.link480p} target="_blank">Download</a>
             </div>
+            --->
             <!--box---->
-            <div class="download-box">
+            <!--<div class="download-box">
                 <span><i class="fas fa-server"></i> Server 2</span>
-                <span>English</span>
+                <span>Indonesia</span>
                 <span>720p</span>
-                <a href="#">Download</a>
-            </div>
+                <a href=${movie.link720p} target="_blank">Download</a>
+            </div> --->
             <!--box---->
             <div class="download-box">
                 <span><i class="fas fa-server"></i> Server 3</span>
-                <span>English</span>
+                <span>Indonesia</span>
                 <span>1080p</span>
-                <a href="#">Download</a>
+                <a href=${movie.link1080p} target="_blank">Download</a>
             </div>
         </div>
     </section>
     <!--==footer==============================-->
     <footer>
         <!--footer-logo--->
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
             WeMovie<span>hd</span>
         </a>
         <!--copyright----->

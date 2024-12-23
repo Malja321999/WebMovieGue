@@ -1,6 +1,6 @@
 import { movies } from "../../js/DataMovie.js";
 
-const NamaMovie = "Venom: Let There Be Carnage";
+const NamaMovie = "Your Name.";
 
 document.addEventListener("DOMContentLoaded", function () {
   const moviePage = document.getElementById("movie_page");
