@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </a>
         <!--copyright----->
         <span class="copyright">
-            Copyright 2021 - GoingToInternet
+            Copyright 2024 - MALJA
         </span>
     </footer>
 </div>
