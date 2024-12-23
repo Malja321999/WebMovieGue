@@ -1,6 +1,6 @@
 import { movies } from "../../js/DataMovie.js";
 
-const NamaMovie = "BloodShot";
+const NamaMovie = "Arcane Season 1";
 
 document.addEventListener("DOMContentLoaded", function () {
   const moviePage = document.getElementById("movie_page");
@@ -117,8 +117,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="download-box">
                 <span><i class="fas fa-server"></i> Server 3</span>
                 <span>Indonesia</span>
-                <span>1080p</span>
-                <a href=${movie.link1080p} target="_blank">Download</a>
+                <span>1080p Part 1</span>
+                <a href=${movie.link1080pP1} target="_blank">Download</a>
+            </div>
+            <!--box---->
+            <div class="download-box">
+                <span><i class="fas fa-server"></i> Server 4</span>
+                <span>Indonesia</span>
+                <span>1080p Part 2</span>
+                <a href=${movie.link1080pP2} target="_blank">Download</a>
             </div>
         </div>
     </section>

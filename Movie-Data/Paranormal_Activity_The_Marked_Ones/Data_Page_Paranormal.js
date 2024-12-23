@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             }<img alt="imbd" src="../images/IMDb-icon.png">
                         </div>
                         <span>${movie.year}</span>
-                        <span>1 j 37 m</span>
+                        <span>${movie.duration}</span>
                     </div>
                     <!--language--------->
                     <div class="language">

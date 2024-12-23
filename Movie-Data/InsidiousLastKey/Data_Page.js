@@ -1,6 +1,6 @@
 import { movies } from "../../js/DataMovie.js";
 
-const NamaMovie = "BloodShot";
+const NamaMovie = "Insidious Last Key";
 
 document.addEventListener("DOMContentLoaded", function () {
   const moviePage = document.getElementById("movie_page");
