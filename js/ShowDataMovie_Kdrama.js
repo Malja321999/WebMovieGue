@@ -141,3 +141,52 @@ menu.addEventListener("click", function () {
     checkbox.checked = false;
   }
 });
+
+/* function to show render movie by menu */
+let hasil = document.getElementById("hasilCategory");
+function showMoviesByCategory(jenisMenuMovie) {
+  post.innerHTML = "";
+  /* hasil.innerHTML = ""; */
+  movies.forEach((movie) => {
+    if (movie.jenis.includes(jenisMenuMovie)) {
+      let movieDiv = document.createElement("div");
+      movieDiv.className = "post-box";
+      movieDiv.innerHTML = `
+        <div class="post-img">
+          <img src="${movie.img}" alt="${movie.title}" />
+        </div>
+        <div class="main-slider-text">
+          <div class="description">
+            <div class="d-text">
+              <h3>SUMMARY</h3>
+              <a href="${movie.url}">${movie.summary}</a>
+            </div>
+          </div>
+          <span class="quality">Full HD</span>
+          <div class="bottom-text">
+            <div class="movie-name">
+              <span>${movie.year}</span>
+              <span>${movie.title}</span>
+            </div>
+            <div class="category-rating">
+              <div class="category">
+                ${movie.Genre.map((genre) => `<a href="#">${genre}</a>`).join(
+                  ", "
+                )}
+              </div>
+              <div class="rating">
+                ${movie.rating} <img alt="imbd" src="../images/IMDb-icon.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      post.appendChild(movieDiv);
+    }
+  });
+  if (post.innerHTML.trim() === "") {
+    hasil.innerHTML = `<h1 style="background-color: red; color: white; text-align: center; width: screen; padding: 10px">Post Genre Tidak Ditemukan Karena Belum DiPost </h1>`;
+  }
+}
+
+showMoviesByCategory("KDrama");

@@ -1,3 +1,4 @@
+/* KDrama;JDrama; */
 export const movies = [
   {
     id: 10,
