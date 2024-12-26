@@ -98,7 +98,7 @@ search.addEventListener("keyup", () => {
 let post = document.getElementsByClassName("post-container")[0];
 movies.forEach((movie) => {
   let movieDiv = document.createElement("div");
-  movieDiv.className = "post-box all movies";
+  movieDiv.className = "post-box all";
   movieDiv.innerHTML = `
     <div class="post-img">
       <img src="${movie.img}" alt="${movie.title}" />
