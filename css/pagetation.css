@@ -1,0 +1,44 @@
+.pagitationElement {
+    display: none;
+    /* Secara default, sembunyikan semua post */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    color: #e70634;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.pagination a:hover:not(.active),
+.pagination a:focus:not(.active) {
+    background-color: #f1f1f1;
+}
+
+.pagination a.active {
+    background-color: #e70634;
+    color: white;
+    border: 1px solid #e70634;
+    font-size: 1.5rem;
+    cursor: default;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    color: #ccc;
+    border-color: #ccc;
+}

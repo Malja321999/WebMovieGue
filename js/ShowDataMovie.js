@@ -76,8 +76,6 @@ function renderMoviesSearchBar(movies) {
   });
 }
 
-
-
 let search = document.getElementById("search");
 search.addEventListener("keyup", () => {
   let filter = search.value.toUpperCase();
@@ -187,7 +185,6 @@ function showMoviesByCategory(jenisMenuMovie) {
   hasil.innerHTML = "";
   movies.forEach((movie) => {
     if (movie.jenis.includes(jenisMenuMovie)) {
-      console.log("isi pencarian :", movie.jenis);
       let movieDiv = document.createElement("div");
       movieDiv.className = "post-box";
       movieDiv.innerHTML = `
