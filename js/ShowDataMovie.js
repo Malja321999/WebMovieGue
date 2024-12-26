@@ -76,6 +76,8 @@ function renderMoviesSearchBar(movies) {
   });
 }
 
+
+
 let search = document.getElementById("search");
 search.addEventListener("keyup", () => {
   let filter = search.value.toUpperCase();
@@ -96,10 +98,11 @@ search.addEventListener("keyup", () => {
 
 /* Function to render latest movie / allcategory */
 let post = document.getElementsByClassName("post-container")[0];
-movies.forEach((movie) => {
-  let movieDiv = document.createElement("div");
-  movieDiv.className = "post-box all";
-  movieDiv.innerHTML = `
+function renderMovies() {
+  movies.forEach((movie) => {
+    let movieDiv = document.createElement("div");
+    movieDiv.className = "post-box";
+    movieDiv.innerHTML = `
     <div class="post-img">
       <img src="${movie.img}" alt="${movie.title}" />
     </div>
@@ -127,8 +130,10 @@ movies.forEach((movie) => {
       </div>
     </div>
   `;
-  post.appendChild(movieDiv);
-});
+    post.appendChild(movieDiv);
+  });
+}
+renderMovies();
 
 /* Close menu category */
 var checkbox = document.getElementById("menu-btn");
@@ -184,7 +189,7 @@ function showMoviesByCategory(jenisMenuMovie) {
     if (movie.jenis.includes(jenisMenuMovie)) {
       console.log("isi pencarian :", movie.jenis);
       let movieDiv = document.createElement("div");
-      movieDiv.className = "post-box all movies";
+      movieDiv.className = "post-box";
       movieDiv.innerHTML = `
         <div class="post-img">
           <img src="${movie.img}" alt="${movie.title}" />
