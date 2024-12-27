@@ -195,15 +195,20 @@ body {
     top: 5rem;
     margin-left: 45rem;
     height: 40px;
-    width: 12.5rem;
+    width: 15rem;
     background-color: white;
+    color: black;
     padding: 3px 20px;
     border-radius: 20px;
 }
 
-.search-box i {
-    color: white;
-
+.fa-search {
+    color: black;
+    font-size: 25px;
+    margin-left: auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
 }
 
 .search-box input {
@@ -228,7 +233,7 @@ body {
     font-size: 10px;
     padding: 5px;
     border-radius: 10px;
-    background-color: rgb(184, 184, 184, .3);
+    background-color: black;
     overflow-y: scroll;
     overflow-x: hidden;
     visibility: hidden;
@@ -596,7 +601,6 @@ footer .logo {
 }
 
 
-
 /*==Making-Home-page-Responsive==================*/
 @media(max-width:1200px) {
 
@@ -658,9 +662,14 @@ footer .logo {
     .search-box {
         grid-column-start: 1;
         grid-column-end: 3;
-        width: 100%;
-        border-radius: 0px;
+        margin-left: 10px;
     }
+
+    .search_bx2 {
+        margin-left: 25px;
+        margin-top: 14.6rem;
+    }
+
 
     .menu li a:hover {
         font-size: 1.8rem;
