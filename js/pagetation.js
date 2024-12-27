@@ -38,6 +38,7 @@ function updatePagination(page) {
     if (currentPage > 1) {
       showPage(currentPage - 1);
     }
+    window.location.href = "#hasilCategory";
   });
   prevLi.appendChild(prev);
   pagination.appendChild(prevLi);
@@ -70,6 +71,7 @@ function updatePagination(page) {
     if (currentPage < totalPages) {
       showPage(currentPage + 1);
     }
+    window.location.href = "#hasilCategory";
   });
   nextLi.appendChild(next);
   pagination.appendChild(nextLi);
