@@ -1,6 +1,30 @@
 /* KDrama;JDrama; */
 export const movies = [
   {
+    id: 11,
+    jenis: "Movie",
+    img: "../images/sisu.jpg",
+    url: "../page/movie-page-sisu.html",
+    summary:
+      "Jauh di dalam hutan belantara Lapland, Aatami Korpi tengah mencari emas, tetapi setelah ia bertemu dengan patroli Nazi, pengejaran yang mendebarkan dan haus emas melalui hutan belantara Lapland yang hancur dan penuh tambang pun dimulai.",
+    title: "Sisu",
+    rating: "6.9",
+    year: "2022",
+    duration: "91 Minutes",
+    language: "English",
+    Genre: ["Action", "War"],
+    screenshot: [
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-1.jpg",
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-2.jpg",
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-3.jpg",
+      "../Movie-Data/Pirates-of-the-Caribbean-Salazar's-Revenge/screenshot-4.jpg",
+    ],
+    trailer: "https://youtu.be/d2k4QAItiSA?si=9w6MUy0SzXPAdp3c",
+    /* link480p: "https://sfl.gl/Arcanes2480p",
+    link720p: "https://sfl.gl/Arcanes2720p", */
+    link1080p: "https://khaddavi.net/Susi",
+  },
+  {
     id: 10,
     jenis: "Movie",
     img: "../images/ArcaneS2.webp",
